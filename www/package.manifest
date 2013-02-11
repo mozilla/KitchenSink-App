@@ -1,0 +1,9 @@
+{
+  "version": "0.2",
+  "name": "Kitchen Sink App",
+  "package_path": "http://localhost:8008/KitchenSink-App.zip",
+  "developer": {
+    "name": "Piotr Zalewa",
+    "url": "http://piotr.zalewa.info"
+  }
+}

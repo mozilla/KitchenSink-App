@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "name": "Kitchen Sink App",
+  "description": "tool to test the functionality of the APIs across platforms as well as showcase the usage of the APIs",
+  "launch_path": "/index.html",
+  "type": "privileged",
+  "icons": {
+    "16": "/img/icons/mortar-16.png",
+    "48": "/img/icons/mortar-48.png",
+    "128": "/img/icons/mortar-128.png"
+  },
+  "developer": {
+    "name": "Piotr Zalewa",
+    "url": "http://piotr.zalewa.info"
+  },
+  "installs_allowed_from": ["*"],
+  "default_locale": "en"
+}

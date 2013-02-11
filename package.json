@@ -1,0 +1,20 @@
+{
+  "name": "Kitchen Sink App",
+  "version": "0.0.1",
+  "dependencies": {
+    "volo-ghdeploy": "0.0.3",
+    "connect": "~2.4.4",
+    "less-middleware": "~0.1.5"
+  },
+  "amd": {},
+  "volo": {
+    "dependencies": {
+      "zepto": "github:madrobby/zepto/v0.8",
+      "underscore": "github:amdjs/underscore/1.4.1",
+      "backbone": "github:amdjs/backbone/0.9.2",
+      "webrt-feature-test": "https://github.com/wfwalker/webrt-feature-test",
+      "tests": "https://raw.github.com/wfwalker/webrt-feature-test/master/tests.js"
+    },
+    "baseUrl": "www/js/lib"
+  }
+}
