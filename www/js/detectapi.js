@@ -8,6 +8,13 @@ define(function(require) {
   });
 
   // here modify/add functions and info
+  detect.sms.run = function() {
+    if ('mozSms' in navigator && navigator.mozSms) {
+      return { output: 'Success', emulated: '' };
+    } else {
+      return { output: 'Failed', emulated: 'No' };
+    }
+  };
 
   // return
   return detect;

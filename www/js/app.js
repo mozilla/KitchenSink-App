@@ -16,23 +16,34 @@ define(function(require) {
     var detect = require('./detectapi');
 
     function formatDate(d) {
-        return (d.getMonth()+1) + '/' +
-            d.getDate() + '/' +
-            d.getFullYear();
+      if (!d) return;
+      return (d.getMonth()+1) + '/' +
+        d.getDate() + '/' +
+        d.getFullYear();
     }
 
     // List view
-    console.log(navigator.mozSms);
     var list = $('.list').get(0);
+
+    var enabled = [];
+    var disabled = [];
     for (var id in detect) {
       var item = detect[id];
-      var isEnabled = item.run()['output'] == 'Success' ? '+ ' : '- ';
+      var isEnabled = (item.run()['output'] == 'Success') ;
+      var plusminus = (isEnabled)  ? '+ ' : '- ';
       var api_item = {
-        title: isEnabled + item.name,
+        title: plusminus + item.name,
         desc: item.info
       };
-      var item = list.add(api_item);
+      if (isEnabled) {
+        enabled.push(api_item);
+      } else {
+        disabled.push(api_item);
+      }
     }
+
+    list.add(enabled);
+    list.add(disabled);
 
 
     var detail = $('.detail').get(0);

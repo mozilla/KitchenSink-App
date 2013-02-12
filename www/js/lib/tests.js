@@ -311,7 +311,7 @@ var tests = [
     id: 'sms',
     name: 'sms',
     run: function () {
-      if ('mozSms' in navigator && navigator.mozSms) {
+      if ('mozSms' in navigator) {
         return { output: 'Success', emulated: '' };
       } else {
         return { output: 'Failed', emulated: 'No' };
